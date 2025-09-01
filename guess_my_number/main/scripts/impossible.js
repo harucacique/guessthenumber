@@ -1,7 +1,7 @@
 // variaveis de modo
 
 let maxNumber = 1000
-let chances = 5
+let chances = 10
 console.log(localStorage.getItem("normal"))
 // main screen
 

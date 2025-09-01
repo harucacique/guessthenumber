@@ -40,8 +40,8 @@ function endGame(endGameResult){
     if(endGameResult){
         winOrLose.innerHTML = `Congratulations, you win!`
         result.innerHTML = `You Win!`
-        playAgainButton.innerHTML = `Hard Mode`
-        localStorage.setItem("hard", "true")
+        playAgainButton.innerHTML = `Impossible Mode`
+        localStorage.setItem("impossible", "true")
     }else{
         winOrLose.innerHTML = `Congratulations, you lose noob`
         result.innerHTML = `you lose`

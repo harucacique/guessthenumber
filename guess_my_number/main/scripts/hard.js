@@ -65,6 +65,7 @@ function submitTry(x){
     }
     if(Number(x) === numberGoal){
         endGame(true)
+        return
     }else if(x > numberGoal){
         result.innerHTML = `The number is lower than ${x}`
     }else if(x < numberGoal){

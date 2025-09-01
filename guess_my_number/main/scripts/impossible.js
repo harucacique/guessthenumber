@@ -41,8 +41,8 @@ function endGame(endGameResult){
     if(endGameResult){
         winOrLose.innerHTML = `Congratulations, you win!`
         result.innerHTML = `You Win!`
-        playAgainButton.innerHTML = `Hard Mode`
-        localStorage.setItem("hard", "true")
+        playAgainButton.innerHTML = `Continue`
+        localStorage.setItem("impossible1", "true")
     }else{
         winOrLose.innerHTML = `Congratulations, you lose noob`
         result.innerHTML = `you lose`
@@ -124,8 +124,8 @@ inputNumber.addEventListener("keypress", (key) => {
     }
 })
 playAgainButton.addEventListener("click", function() {
-    if(localStorage.getItem("impossible") === "true"){
-        window.location.href = "impossible.html"
+    if(localStorage.getItem("impossible1") === "true"){
+        window.location.href = "https://www.youtube.com/watch?v=ROlOAlCAmr8"
     }else{
         window.location.href = "start.html"
     }

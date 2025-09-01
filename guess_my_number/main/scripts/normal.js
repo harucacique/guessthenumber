@@ -76,9 +76,8 @@ function submitTry(x){
     triesHtml.innerHTML = `Tries: ${tries}`
     if(tries === 0){
         endGame(false)
-        return
     }
-    if(tries === 3){
+    if(tries === 1){
         loadHint()
     }
 }

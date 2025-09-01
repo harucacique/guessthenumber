@@ -68,7 +68,6 @@ function submitTry(x){
     if(tries <= 0){
         return
     }
-
     if(Number(x) === numberGoal){
         endGame(true)
         return
@@ -82,7 +81,8 @@ function submitTry(x){
     if(tries === 0){
         endGame(false)
     }
-
+    inputNumber.value = ""
+    inputNumber.focus()
 
 }
 

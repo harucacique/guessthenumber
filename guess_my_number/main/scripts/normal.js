@@ -59,6 +59,7 @@ function loadStatsEnd(){
     hideRemove()
 }
 function submitTry(x){
+
     if(tries <= 0){
         return
     }
@@ -73,10 +74,13 @@ function submitTry(x){
     triesHtml.innerHTML = `Tries: ${tries}`
     if(tries === 0){
         endGame(false)
+        return
     }
     if(tries === 3){
         loadHint()
     }
+    inputNumber.value = ""
+    inputNumber.focus()
 }
 
 function scoreCalc(){
@@ -114,7 +118,10 @@ playAgainButton.addEventListener("click", function() {
     if(localStorage.getItem("hard") === "true"){
         window.location.href = "hard.html"
     }else{
-        window.location.href = "/main/start.html"
+        window.location.href = "../Start.html"
     }
+})
+back.addEventListener("click", () => {
+    window.location.href = "../Start.html";
 })
 topScoreHtml.innerHTML = `Top score: ${localStorage.getItem("topScore")}`

@@ -76,6 +76,8 @@ function submitTry(x){
     if(tries === 1){
         loadHint()
     }
+    inputNumber.value = ""
+    inputNumber.focus()
 }
 
 function scoreCalc(){
@@ -116,7 +118,10 @@ playAgainButton.addEventListener("click", function() {
     if(localStorage.getItem("hard") === "true"){
         window.location.href = "impossible.html"
     }else{
-        window.location.href = "/main/start.html"
+        window.location.href = "../Start.html"
     }
+})
+back.addEventListener("click", () => {
+    window.location.href = "../Start.html";
 })
 topScoreHtml.innerHTML = `Top score: ${localStorage.getItem("topScore")}`

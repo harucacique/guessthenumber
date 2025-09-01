@@ -44,7 +44,7 @@ function endGame(endGameResult){
         playAgainButton.innerHTML = `Hard Mode`
         localStorage.setItem("hard", "true")
     }else{
-        winOrLose.innerHTML = `Congratulations, you loose noob`
+        winOrLose.innerHTML = `Congratulations, you lose noob`
         result.innerHTML = `you lose`
         playAgainButton.innerHTML = `Play Again`
         localStorage.clear()
@@ -59,7 +59,8 @@ function loadStatsEnd(){
     hideRemove()
 }
 function submitTry(x){
-
+    inputNumber.value = ""
+    inputNumber.focus()
     if(tries <= 0){
         return
     }
@@ -79,8 +80,6 @@ function submitTry(x){
     if(tries === 3){
         loadHint()
     }
-    inputNumber.value = ""
-    inputNumber.focus()
 }
 
 function scoreCalc(){
@@ -118,10 +117,10 @@ playAgainButton.addEventListener("click", function() {
     if(localStorage.getItem("hard") === "true"){
         window.location.href = "hard.html"
     }else{
-        window.location.href = "../Start.html"
+        window.location.href = "start.html"
     }
 })
 back.addEventListener("click", () => {
-    window.location.href = "../Start.html";
+    window.location.href = "start.html";
 })
 topScoreHtml.innerHTML = `Top score: ${localStorage.getItem("topScore")}`

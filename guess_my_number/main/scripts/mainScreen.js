@@ -46,11 +46,11 @@ window.addEventListener('load', () => {
 
 
 difficultEasy.addEventListener("click", () => {
-    window.location.href = "difficulties/easy.html";
+    window.location.href = "easy.html";
 })
 difficultNormal.addEventListener("click", function() {
     if(localStorage.getItem('normal') === 'true') {
-        window.location.href = "difficulties/normal.html";
+        window.location.href = "normal.html";
     }
 })
 difficultHard.addEventListener("click", function() {
@@ -60,6 +60,6 @@ difficultHard.addEventListener("click", function() {
 })
 difficultImpossible.addEventListener("click", function() {
     if(localStorage.getItem('impossible') === 'true') {
-        window.location.href = "normal.html";
+        window.location.href = "impossible.html";
     }
 })

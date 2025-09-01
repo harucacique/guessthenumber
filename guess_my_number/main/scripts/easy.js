@@ -65,6 +65,8 @@ function reset(){
 }
 
 function submitTry(x){
+    inputNumber.value = ""
+    inputNumber.focus()
     if(tries <= 0){
         return
     }
@@ -81,8 +83,6 @@ function submitTry(x){
     if(tries === 0){
         endGame(false)
     }
-    inputNumber.value = ""
-    inputNumber.focus()
 
 }
 
@@ -100,6 +100,7 @@ hideAdd()
 // eventos
 
 submitButton.addEventListener("click", () => {
+
     if(inputNumber.value !== "" && inputNumber.value >= 1 && inputNumber.value <= maxNumber) {
         submitTry(inputNumber.value)
     }
@@ -113,11 +114,11 @@ playAgainButton.addEventListener("click", function() {
     if(localStorage.getItem("normal") === "true"){
         window.location.href = "normal.html"
     }else{
-        reset()
+        window.location.href = "start.html"
     }
 })
 back.addEventListener("click", () => {
-        window.location.href = "../Start.html";
+    window.location.href = "start.html";
 })
 if(localStorage.getItem("topScore") !== null){
     topScoreHtml.innerHTML = `Top score: ${localStorage.getItem("topScore")}`

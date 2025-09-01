@@ -1,6 +1,36 @@
-
+@font-face {
+    font-family: 'vcr_osd_mono';
+    src: url('../../fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+:root{
+    --color1: #0A0A0A;
+    --color2: #1A1A1A;
+    --color3: #2A2A2A;
+    --color4: #3A3A3A;
+    --color5: #4A4A4A;
+}
+header{
+    text-align: center;
+}
+header > p{
+    font-size: 20px;
+}
+body{
+    font-family: 'vcr_osd_mono', sans-serif;
+    color: white;
+    height: 100vh;
+    background-color: var(--color2);
+    overflow: hidden;
+}
+h1{
+    margin-top: 50px;
+    font-size: 60px;
+    margin-bottom: 0;
+    transition: ease 0.3s;
+}
 h2{
     text-align: center;
+    font-size: 40px;
 }
 main{
     position: absolute;
@@ -12,7 +42,7 @@ main{
     display: flex;
     flex-direction: column;
     margin: 30px auto;
-    width: 200px;
+    width: 230px;
 }
 span{
     text-align: center;
@@ -20,7 +50,7 @@ span{
     color: white;
     background-color: var(--color3);
     padding: 20px;
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 5px;
     transition: ease 0.3s;
 }

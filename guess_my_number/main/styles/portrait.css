@@ -1,0 +1,19 @@
+
+header h1{
+    font-size: 100px;
+}
+header > p{
+    font-size: 40px;
+}
+#difficultContainer{
+    width: 600px;
+    align-items: center;
+}
+h2{
+    font-size: 50px;
+}
+#difficultContainer span{
+    width: 100%;
+    font-size: 45px;
+    margin-top: 15px
+}

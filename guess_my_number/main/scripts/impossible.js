@@ -1,7 +1,7 @@
 // variaveis de modo
 
 let maxNumber = 1000
-let chances = 10
+let chances = 8
 console.log(localStorage.getItem("normal"))
 // main screen
 
@@ -67,6 +67,7 @@ function submitTry(x){
     }
     if(Number(x) === numberGoal){
         endGame(true)
+        return
     }else if(x > numberGoal){
         result.innerHTML = `The number is lower than ${x}`
     }else if(x < numberGoal){
@@ -77,9 +78,11 @@ function submitTry(x){
     if(tries === 0){
         endGame(false)
     }
-    if(tries === 1){
+    if(tries === 2){
         loadHint()
     }
+    inputNumber.value = ""
+    inputNumber.focus()
 }
 
 function scoreCalc(){

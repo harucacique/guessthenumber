@@ -1,0 +1,31 @@
+
+h2{
+    text-align: center;
+}
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#difficultContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 200px;
+}
+span{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--color3);
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 5px;
+    transition: ease 0.3s;
+}
+span:hover{
+    border-radius: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -13,9 +13,11 @@ header{
     text-align: center;
 }
 header > p{
-    font-size: 20px;
+    font-size: 25px;
 }
 body{
+    display: grid;
+    flex-flow: column nowrap;
     font-family: 'vcr_osd_mono', sans-serif;
     color: white;
     height: 100vh;
@@ -23,20 +25,14 @@ body{
     overflow: hidden;
 }
 h1{
-    margin-top: 50px;
-    font-size: 60px;
+    margin-top: 30px;
+    font-size: 65px;
     margin-bottom: 0;
     transition: ease 0.3s;
 }
 h2{
     text-align: center;
-    font-size: 40px;
-}
-main{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 45px;
 }
 #difficultContainer{
     display: flex;
@@ -44,13 +40,16 @@ main{
     margin: 30px auto;
     width: 230px;
 }
+main{
+    justify-self: center;
+}
 span{
     text-align: center;
     text-decoration: none;
     color: white;
     background-color: var(--color3);
     padding: 20px;
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 5px;
     transition: ease 0.3s;
 }
